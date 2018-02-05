@@ -1,0 +1,19 @@
+Briefly describe one way how data travels on the internet.
+  One way that data travels on the internet is using fiber-optic cables. These
+  wires of glass transmit light at different frequencies in a manner that causes
+  them to bounce off of the sides. Transmitting 1's and 0's much faster and over
+  a greater range than copper or radio wires.
+
+What is the relationship between IP address and the DNS?
+  An Internet Protocol address is the _________ assigned to a computer. this computer can be a
+  personal computer or can store information to be presented as a website. A DNS
+  is a server that stores the IP address of websites and when presented
+  with a search for a URL will search itself and other server's for the relevant
+  IP address.
+
+What is a cookie?
+  is a small fragment of data sent from a website and stored on a user's computer
+  by their web browser. Websites use this to remember who you are.
+
+List the the three basic parts of a URL.
+  protocol, domain, and path.
