@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Title</title>
+    <!-- unseen notes. Visitors can see actions not thoughts-->
+    <!-- link to writing your first webpage. With useful tips. -->
+      <!-- https://www.codeschool.com/beginners-guide-to-web-development/writing-your-first-web-page -->
+  </head>
+
+  <body>
+    <!--stuff visible to visitors.-->
+
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h6>Header 6 is the max</h>
+    <!--By default, browsers will display headings with decreasing font size,
+    although headings should instead be explicitly styled using CSS rules and
+    definitions. This prevents any un-expected rendering of the web document
+    content.-->
+
+    <p>Paragraph 1</p>
+
+    <pre>
+      You can use the preformatted text element (<pre>...</pre>)
+        - tell a browser to render spaces and text exactly as you’ve typed.
+
+      This tag usually displays the contents of the element in a fixed-width
+      font, as it is primarily used for preformatted code. However, it can also
+      be used for preformatted text.
+    </pre>
+
+    <br />
+      <!--this is a line break. It is catagorized as an empty element-->
+      <!--An ‘empty element’ only has one tag.
+      Before the closing bracket of an empty element there
+      will often be a space and a forward-slash ( / ) character.
+      It is a good habit to get into writing these tags in this way.-->
+      <!-- line breaks can be placed inside of paragraphs as well -->
+
+    <hr />
+      <!--this is a horizontal rule. It is a line that
+      runs across a browser window.-->
+
+    <img src="./imagelocation/image.jpg" />
+    <!-- Please note that in HTML we use quotations
+      ("...") to contain the URL to the file. -->
+
+
+
+
+
+  </body>
+
+
+</html>
