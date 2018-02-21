@@ -1,0 +1,346 @@
+<!--
+this is a comment
+everything placed within the "--" is equivalent to java's "/*  */"
+-->
+
+ATTRIBUTES:
+  - you can an attribute to an element tag (ie: <p>,<h1>,etc)
+  - Attributes are always placed inside the opening
+    tag for the element they refer to.
+  - Attributes are provided within a key="value" format.
+  - The  key  is an identifier the browser processor will recognize.
+    These keys are predetermined by the W3 consortium.
+  - the  value  provides information about the attribute.
+  - because you use double quotations around the value,
+    you can use spaces within it. there will always be one space
+    placed between the tag label and attribute and between any
+    subsequent attribute.
+
+  example:
+      <p align="left">
+      <p align="left" example="value">
+
+  - A very common first attribute value located on a
+    webpage is in the root element (<html>...</html>)
+  - The HTML lang attribute can be used to declare the language
+    of a Web page or a portion of a Web page. This is meant to
+    assist search engines and browsers.
+
+  ! If i want my site indexed as containing content written in
+    "US-style English:"
+
+  example:
+    <html lang="en-US">
+      <p>example text</p>
+    </html>
+
+DOCTYPE DECLARATION
+  - Must be the FIRST thing in your HTML file and MUST be on line 1.
+
+ELEMENTS IN THE HEAD
+  - the head is a container for processing information and document
+    metadata.
+
+  - Proper order of placement of elements:
+      > META element
+      > Title
+
+
+
+  - META element:
+      - lives inside the head element and contains
+        information about that webpage.
+      - telling search engines about your page, who
+        created it, and whether or not it is
+        time-sensitive.
+      - empty element
+
+      example:
+        <head>
+
+        <!-- Define the character set used: -->
+        <meta charset="UTF-8">
+
+        <!-- Provide a description of your page: -->
+        <meta name="description" content="Head Elements in HTML">
+
+        <!-- Provide the author information for the page: -->
+        <meta name="author" content="Justine Evans">
+
+        </head>
+
+      -  ‘name’ and ‘content' attributes are often used together
+          -> specify the properties of the entire page
+          -> The value of the name attribute is the property you
+             are setting.
+          -> The value of the content attribute is the value
+             that you want to give to this property.
+          -> name attribute = intention to specify a
+                              description for the page
+          -> content attribute = description is actually
+                                 specified
+          -> The value of the name attribute can be
+             anything you want it to be.
+
+      - Types of Meta elements:
+
+        charset -  This define the character set to use for page
+                    display. To display an HTML page correctly, a
+                    web browser must know which character set
+                    (character encoding) to use. UTF-8 (Unicode)
+                    covers almost all of the characters and symbols
+                    in the world. This includes the original ASCII
+                    standard that covers most of the character
+                    symbols you use.
+
+        !          Usually the first element in the head
+
+        Description - This contains a description of the page.
+                        This description is commonly used by search
+                        engines to understand what the page is about.
+                        As such, it should be less than 155 characters.
+
+        Author - This defines the author of the webpage.
+
+        Viewport -  user’s visible area of a web page. It varies with
+                    the device, and will be smaller on a mobile phone
+                    than on a computer screen.
+                 -  include this in all web pages.
+                 - example:
+                        <meta name="viewport" content="width=device-width,
+                        initial-scale=1.0">
+
+                        - The  width=device-width  part sets the width
+                        of the page to follow the screen-width of the
+                        device (which will vary depending on the device).
+
+                        - The  initial-scale=1.0  part sets the initial
+                        zoom level when the page is first loaded by
+                        the browser.
+  - TITLE element
+      - The title tag defines the title of a document. This action:
+
+      - defines a title in the browser toolbar.
+      - provides a title for the page when it is added to favorites.
+      - displays a title for the page in search-engine results.
+      - You cannot have more than one title element. However, you
+        must have the title element for the document to validate
+        as HTML.
+      ! only required element in the head
+
+  - LINK element
+    - The link element tells a browser about other resources that
+      the page may need to load.
+    - Typically, these are the CSS or “style sheets” which
+      dictate how a page will appear in a browser.
+    - This element only requires an opening tag, as all information
+      for the element is contained as attributes within the
+      opening tag.
+    - "empty element"
+
+  - STYLE element
+    - The style element allows for simple style definitions to be
+      established in a single HTML page without having to link to
+      external documents.
+
+
+ELEMENTS IN THE BODY
+  - The body element is where all of the content of the site gets
+   placed. This is the data that is rendered by the browser and
+   displayed on the client’s local computer.
+  - Within the body there will generally be 2 types of markup used:
+      > Structural markup
+      > Semantic markup
+
+  - STRUCTURAL markup
+    - embeds information about the structure of a document
+    - These elements will help guide a user visually and provide
+      information about the type of content through a document.
+    - These elements are also used by the browser and DOM to
+      understand the content of a document. A browser will use
+      this structural markup to assist screen readers and other
+      accessibility-based software.
+    - including elements such as:
+          > Headings
+          > Paragraphs
+          > Breaks
+          > Lists
+
+  - SEMANTIC markup
+    - Semantic markup is used to reinforce the semantics - or
+      meaning - of the information in a document.
+    - Semantic markup:
+        > <i>...</i> - italics
+        > <em>...</em> - place emphasis
+        > <b>...</b> - bold
+        > <strong>...</strong> - strong importance
+        > <cite>...</cite> - citations
+        > <sup>...</sup> - superscript - denote characters that
+              should appear as ‘superscript’, such as date
+              suffixes or mathematical powers
+        > <sub>...</sub> - subscript - used for footnotes or
+              chemical and mathematical formulas, esp. with
+              fractions
+        > <q>...</q> - quotations
+        > <blockquote>...</blockquote> - blockquote -
+              specifies a section that is quoted from another source.
+        > <abbr>...</abbr> - abbreviation - defines an abbreviation
+              or an acronym, like “Mr.”, “Dec.”, “ASAP”, “ATM”
+        > <cite>...</cite> - cite - defines the title of a work
+        > <dfn> - link to definitions -
+              <def title="definition of term">term</def>
+        > <address>...</address> - address - Most browsers will added
+              a line break and after the address element.
+        > <del>...</del> - delete - defines text that has been
+              deleted from a document (strikes a line through deleted text)
+        > <ins>...</ins> - insert - defines text that has been inserted
+              (underline inserted text)
+        > <s>...</s> - specifies text that is no longer correct, accurate
+              or relevant
+
+  - LISTS
+    - convey information like sets of instructions, elements in a set,
+      definitions, and outlines.
+    - There are two major types of lists that are often used:
+        > Ordered lists
+        > Unordered lists
+    - you can combine list types as well as use multiple nested
+      list elements to create hierarchically-related lists
+
+          example:
+            <ol id="ordered-list">
+              <li>Ordered List Item #1.</li>
+              <li>Ordered List Item #2.</li>
+                <ul id="unordered-list">
+                  <li>Item A relating to Order List Item #2.</il>
+                  <li>Item B relating to Order List Item #2.</li>
+                <ul>
+                  <li>Ordered List Item #3.</li>
+            <ol>
+
+    - ORDERED lists:
+        > each entry is prepend with an ascending identifier such
+          as numbers, letters, or roman numeral
+        > <ol>...</ol> - identify an ordered list
+        > <li>...</li> - identify each "list item"
+
+    - UNORDERED lists:
+        >  begin with dots, bullets, dashes, or other visual
+        signifiers
+        > <ul>...</ul> -  identify an unordered list
+        > <li>...</li> - identify each "list item"
+
+    - DEFENITION lists
+        > define terms
+        > <dl>...</dl> - identify a list of definitions
+        > <dt>...</dt> - The term being defined is encapsulated
+            in “definition term” tags.
+        > <dd>...</dd> - The terms definition is then encapsulated
+            in the “definition” tags.
+
+  - EXTERNAL links
+    - hyperlink - "a link" - is a reference to data that the reader
+                  can directly follow either by clicking, tapping,
+                  or hovering. A hyperlink points to a whole document
+                  or to a specific element within a document.
+    - hypertext - text with hyperlinks. The text that is linked is
+                  called anchor text. A software system that is used
+                  for viewing and creating hypertext is a hypertext
+                  system, and to create a hyperlink is to hyperlink
+                  (or simply to link). A user following hyperlinks is
+                  said to navigate or browse the hypertext.
+    - <a>...</a> - hyperlink tag - Any text between a hyperlink element’s
+                  tags will display as “hypertext”. Traditionally, this
+                  has been blue, underlined text, visually signifying to
+                  the user that the text is a link.
+    - <a href="URL">linktext</a> - link to another document using a
+                  hyper-reference attribute
+    - Link text should be specific about where the user will be going
+      if they click a link. This means that links should not be simple
+      text such as “Click Me!” Instead, good style would dictate that
+      the link text be a description of the site, name, or information
+      that informs the user.
+
+    - TARGETING how a link opens
+        > The target attribute provides us a way of specifying to a
+          browser how a link will open in the browser.
+        > default behavior is to open the linked document in the same
+          window/tab from which is was clicked
+          -> "_self"
+          -> "_blank" - Opens the linked document in a new window or tab
+          -> "_parent" - Opens the linked document in the parent frame
+          -> "_top" - Opens the linked document in the full body of the window
+          -> "_framename" - Opens the linked document in a named _framename
+        > <a href="URL" target="_blank">link text</a>
+
+    - LINKS to outside sites
+        > Links that include the "http/https" as part of the entire
+          URL are known as absolute
+        > the https is required to signify that this is an external
+          link outside of the current document's directory/server
+
+    - E-MAIL
+        > prepend with "mailto:"
+        > IE: <a href="malto:example@site.com">E-mail</a>
+        ! it is good practice to write the full email out
+
+  - INTERNAL links
+    -linking internally to pages:
+      - Relative URLs contain no protocols or domain information. This
+        is convenient because they are shorter, but can only reference
+        files in the same path.
+      - how do we navigate to a different directory using a relative URL?
+      - "./..." states that we need to remain in the current
+        level of our directory heirarchy
+      - "../..." is effectively saying "to find this file, begin here
+        and then step back a directory."
+
+    -link to specific part of same page:
+      - use the ID attribute in HTML to create links to specific
+        portions of a page - (id attribute)
+      - assign unique identifiers to each element
+      - when assigning ids on the same page, no two elements should have
+        the same values (ie, names)
+
+      example:
+        <menu>
+          To Part 1
+          To Part 2
+        </menu>
+
+        <main>
+          <h3 id="first-heading">Part 1</h3>
+          <h3 id="second-heading">Part 2</h3>
+        </main>
+
+        - To link to an HTML element with an assigned id, simply use
+          the id in the hyper-reference (href), prepended with a
+          hashtag character (#).
+
+        example:
+          <menu>
+            <a href="#first-heading">To Part 1</a>
+            <a href="#second-heading">To Part 2</a>
+          </menu>
+
+          <main>
+            <h3 id="first-heading">Part 1</h3>
+            <h3 id="second-heading">Part 2</h3>
+          </main>
+
+      *NAMING ID's
+          > IDs should be treated like variables in other
+            languages, with regards to the naming conventions.
+
+KEEPING CODE PLEASANT
+  - a site with well-written markup will have:
+      > Logical or Liner Ordering
+      > Properly Nested Tags
+      > Indented Elements
+  - There are many other unspoken rules you can Google, but
+    those 3 are my major pet peeves when done poorly - and I’m
+    likely to call you out on them
+  - Most languages read and process top-to-bottom, so it's important
+    to list these elements linearly and/or logically down the page.
+  - burrito your tags (don't:<tag3><tag2><tag1>...</tag1></tag2></tag3>)
+  - indent your lines!!
