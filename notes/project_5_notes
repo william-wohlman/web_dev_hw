@@ -1,0 +1,605 @@
+Topic: HTML
+
+IMAGES
+  Use URL source to retrieve additional data for the page.
+    Instead of sending user to another page with a hyperlink.
+
+  Images should be less then 1000kB in size (under 1 Megabyte)
+  Larger the file, the longer it'll take to load
+
+  To optimize for web, editors have a "Save for Web and Devices"
+    or "Expart As" in the save options.
+
+  >> see project_5/notes_5_example_1.png <<
+
+  The image element is a multi-part element comprised of several
+    "commands" over how the image will render.
+
+  The image element is and Empty Element (like <br /> or <hr />).
+
+  <img />
+
+    Tag attributes:
+      src="(URL source)"
+          - Typically a Relative URL
+          - Can also be an Absolute URL
+
+      alt="(image description)"
+          - style and accessibility standards require you include
+              the Alternative Text Attribute.
+          - This is used by screen readers for the visually
+              impared.
+          - Must provide a detailed description. Esp if the image
+              is crucial to content.
+
+      title="(image title)"
+          - will be displayed by the browser when the user
+              hovers their mouse over the image.
+          - This will also be used in the case that the image
+              cannot be loaded.
+
+      width="" + height=""
+          - String with an integer representing the
+              width + height of the image.
+          - Should be the same as the images actual width and height.
+          - These attributes will scale the image to the specified
+              values.
+          - The web browser uses these to reserve the correct amount
+              of space for the image on the page when rendering.
+              This means that the page will not have to re-render to
+              accommodate an image that loads after the rest of the
+              page.
+
+  The hero image is a LARGE attractive header. Typically a
+    relative image, designers have gotten creative. Using
+    vector backgrounds, illustrated artwork, and even animated
+    video.
+
+    - Cleverbird Creative's homepage uses a fullscreen background
+        image that scales to take up your entire monitor.
+        Then each sections as you scroll down has its own
+        background.
+
+    - Fullscreen Backgrounds could be considered an offshoot
+        of the hero image. Christian Woo has a website
+        showcasing his furniture. Each individual page uses a
+        background photo to expand upon his body of work.
+
+        The pages themselves are small and do not require a whole
+        lot of content. So the photograph livens up the otherwise
+        blank space.
+
+        This is a good idea for artists who want to showcase
+        their skills. It immediately demonstrates your value by
+        incorporating samples of what you produce.
+
+        Sweet Basil's homepage uses rotating photos to demonstrate the
+        value of their restaurant. The other pages also use small hero
+        images for accentuation.
+
+    - Rotating backgrounds offer a panoply of resources and options.
+        Check out Matter of Form's fullscreen image display, which
+        allows visitors to switch between different pieces of
+        content on a whim.
+
+  **NOTE: How can I use these in a portfolio and make it simple to navigate?
+
+  Image optimization:
+    https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+
+  Best big background image websites Awwwards:
+    https://www.awwwards.com/websites/big-background-images/
+
+
+---
+TABLES
+  Used to represent relationships and complex data. such as scores
+    and stats. You can also use tables to organize non statistical
+    information.
+
+  CSS replaces these with stylesheets. Tables can be difficult for
+    accessibility software to translate.
+
+  <table>...</table>
+
+      Tags:
+        <tr>...</tr>
+          - table rows.
+
+          - inside of each <tr> are the individual cells
+            (equal to the number of columns)
+
+          - each referenced using a set of <td> tags.
+
+        <td>...</td>
+          - Table Data
+
+          - Table Cells contain table data. represented using this
+              element.
+
+        <th>...</th>
+          - Table Headings
+
+          - provide structure and style to head your columns and rows.
+
+          - This is helpful for people who use screen readers and
+              helps search engines to correctly index your page.
+
+        scope=""
+          - delineates columns and rows.
+
+        A column is headed using <th scope="col">...</th>
+
+        A row is headed using <th scope="row">...</th>
+
+        Empty cells are not forgotten cells - they still need to be
+          created using <th> or <td>. Not including these elements
+          will cause your table to improperly render.
+
+        >> see project_5/notes_5_example_2.png <<
+        >> see project_5/notes_5_example_3.png <<
+
+
+  ---
+  TABLE STYLING
+    We can add visual interest to tables to help with easier reading
+      and showcasing of data using Style Elements.
+
+    Use the document's <head>, via the <style>...</style> element.
+
+    We can reference the individual elements of the table as a group
+      for easier styling. We do this by separating the elements by
+      commas in the same line of code. Everything in this string
+      will be affected by the styling described between {}.
+
+    CSS stylesheets will replace this.
+
+      <head>
+          <style>
+              table, th, td {
+                /* Attributes that will "decorate" the table: */
+              }
+          </style>
+      </head>
+
+      <body>
+          <table>
+              <!-- Table contents to-be-styled: -->
+          </table>
+      </body>
+
+    Borders:
+      Tables are rendered without borders/ Using this code, the
+      table outline, heading columns and rows, and cells will all
+      be given a border.
+
+      border="(width)(style)(color)"
+
+      padding=""
+        > cushions your cell content from the borders. Use pixels.
+
+      border-collapse: collapse;
+        > use to make only one line between your cell.
+
+
+  ---
+  FORMS
+    Forms and form elements are used by web developers to collect
+      data & information from users on websites.
+
+      Forms can include:
+        > drop down boxes (multiple choices)
+        > text entry (usernames, real names, phone numbers,
+            e-mails, etc)
+        > radio checkmarks/buttons (select all-that-apply)
+        > password input (hidden text)
+        > buttons (used for submitting information and navigating
+            to new pages)
+        > file uploads
+
+    <form>...</form>
+      Adds a form to a webpage.
+
+      form elements in these tags
+
+      Tag Attributes:
+        action="#"
+          - is a link to a server-side script (a file on another
+              computer not the users computer)
+          - Typically, this filr is a code file that will do 'something'
+              with the user's data before returning information back
+              to the browser.
+          - The value of this attribute will always be a URL
+
+        method=""
+          - forms can be sent using one of two methods:
+              > get -
+                  values are added to the end of the specified
+                    action URL
+                  This is ideal for searches or retrieving data from
+                    the server
+              > post -
+                  values are sent in what are known as HTTP headers.
+                  Use when:
+                    - Users are uploading a file
+                    - the data will be very longe
+                    - the data is sensitive
+                    - the data is intended to alter or access
+                        a database on a server.
+        id="" + class=""
+          - Assign a unique element id and class that can be used by
+              other languages to refer to the specific form.
+
+    Altogether:
+      <form action="http://www.example.com/subscribe.php" method="get"
+      id="subscribe-form" class="basic-forms">
+
+              <!-- This is where the related form elements and
+              controls will appear. -->
+
+      </form>
+
+
+  INPUT ELEMENTS
+    Used to collect data from users.
+
+    The data collected by this element can be sent as part of a bunch
+        of data in a form element to a server.
+
+    Also be accessed through client-side Javascrip, allowing developers
+    to create ways to create ways of getting data they can process on
+    the client-computer.
+
+    Tags:
+      <input />
+        - empty element.
+
+        - as with forms, this element is reliant on attributes within
+            the tag to allow it to be useful.
+
+    Attributes:
+      type=""
+        - defines the type of data it will collect. As well as ow it
+            will be displayed.
+
+      name=""
+        - required. sent to the sever as "name:value"
+
+        - For example, an input element with the name attribute set
+            to "username" (i.e. name="username") might collect the
+            data "Justine", which would then be sent to the server
+            as username:Justine.
+
+      id=""
+        - As with many other elements in HTML, you should assign
+        a unique element id that can be used by other languages to
+        refer to the specific form.
+
+        - allows Javascript to use data from a form element.
+
+
+  ---
+  TEXT TYPES
+    type="text"
+      - The most common and basic input element type.
+
+      - This creates a "text box" where users can type in information
+         that is available to the browser.
+
+      - You can use this within the paragraph (<p>...</p>) tag.
+
+    type="password"
+      - creates a "password input box"
+
+      - attribute creates a single line text entry field where the
+          characters are hidden with *s
+
+      - never use this type of field when sending sensitive
+          data such as SSN's. For such situations, a site should create
+          a web socket or use Secure Socket Layer connection with a
+          server to guarantee secure delivery of data.
+
+    <textarea>...</textarea>
+      - creates a input field element where users can enter longer
+          responses.
+
+      - uses an opening and closing tag pair. any text within the tags
+          will be in the box.
+
+      - example:
+          <textarea name="comments" id="test-textarea">Enter up to
+            500 characters...</textarea>
+
+    maxlength
+      - the maxlength attribute is used to limit the number of
+          characters a user may enter into a text field. For example
+          a text field that expects a year, may be limited to
+          maxlength="4" characters.
+
+*Can I limit the type of characters?
+
+    Columns and Rows
+      - cols and rows
+
+      - specify the number of columns and rows. this changes the size
+          of the displayed elements as well as how the text will
+          look when typed.
+
+            > cols
+              is the width of the textarea in character width
+                (number of characters that will fit left to right)
+
+            > rows
+              is the number of visible lines.
+
+    Placeholder
+      - the placeholder attributes can be used to place grey text in
+          a text field. this text will disappear when the user focuses
+          the element by clicking in it.
+
+      - this can be used to offer hints about the type of text is
+          expected or to encourage the user to type in the field.
+
+    Size
+      - You can use the size attribute to set the display
+          (in character widths) for the text input box. for example,
+          the "birth year" input is set to only allow 4 characters, so
+          why not limit the size of the box to 4 characters as
+          visual indicator?
+
+    value
+      - use to pre-fill a text box.
+
+      - Unlike placeholder, when  you click in the text box, the
+          "pre-filled" text is not replaced. instead the user
+          can edit it freely. remove it or keep it.
+
+    autofocus
+      - the autofocus attribute is used to set the "focus" of
+          a browser to the specific form element after the page
+          loads.
+
+  SELECTION INPUT
+    Allows you to ask questions that allow users to select one or more
+      of a handful of predetermined choices.
+
+    type="radio"
+      - Radio buttons allow users to select one item.
+
+        > items:
+          name=""
+            - Radio buttons need to be grouped together. This tells the
+                browser that only "one of the choices" of the group can
+                be selected. to group radio buttons together, the
+                developer provides the same name="" attribute value for
+                each possible choice.
+
+                This name attribute will be sent along with the returned data.
+
+          value=""
+            - Unlike text boxes, where the user enters unique data,
+                radio buttons provide discrete options/data. To set the
+                data that might be returned from this element, use the
+                value="" attribute. the name of the option.
+
+          checked=""
+            - attribute can be used with one of the radio button
+                elements to 'pre-select' an option that will be displayed
+                when the page loads.
+
+      - Radio buttons cannot be "deselected"
+
+    type="checkbox"
+      - Allow users to select or deselect zero, one or more options.
+
+        > items:
+          name=""
+            - when grouping checkboxes, as with radio buttons, the
+              name="" should be the same for all of them.
+
+          value=""
+            - Value="" should be unique to each element.
+
+          checked
+            - As with radio buttons, you can use the checked attribute to
+                pre-select checkboxes.
+
+      - Displayed text should appear AFTER each checkbox element.
+
+THE SELECT BOX
+    A select box allows a user to select one option from a dropdown list.
+
+    Unlike the other form elements we have been looking at, this element
+      has its own name and uses opening and closing
+      tags: <select>...</select>.
+
+    Dropdown lists are very similar to radio buttons, however these are
+      more appropriate when a large amount of selections is possible
+      (i.e. “select a state”)
+
+    <option>...</option>
+      - the option element  is used within select elements to indicate
+          each possible option. Any text between the option tags will be
+          displayed in the dropdown box.
+
+    value=""
+      - unique for each element.
+
+      - will be sent back with the elements name attribute.
+
+    selected
+      - can be used to pre-select an option. if the is attribute is
+          omitted then the first option will be pre-selected.
+
+  BUTTONS
+    Common interactive features in web design.
+
+    can provide graphic interest and functionality.
+
+    Upload Button
+      - file upload element (type="file") allows the user to
+          > open a navigation window
+          > Select a filled
+          > upload it to the URL specified by the action="" attribute.
+
+      - Most of the visual appearance for this type of box, as well as the
+        subsequent 'file browser' will be dictated by the users
+        browser & OS.
+
+      - Example:
+          <form action="https://www.example.com" method="post">
+            <p>Upload your song in MP3 format:</p>
+              <input type="file" name="song" />
+              <br />
+              <input type="submit" value="Upload" />
+          </form>
+
+    Submit Button
+      - is used to send a form to a server. This is the one form type that
+          does not require a name attribute.
+
+      - The value="" attribute is used to specify the text that appears on
+          the button. It is good practice to always specify this as opposed
+          to allowing the browser to use its default "submit query" text.
+
+      - The appearance of submit buttons is dictated by individual browsers.
+          However, these can be styled using CSS.
+
+      - Example:
+          <form action="https://www.example.com/subscribe.php" method="post">
+            <p>Subscribe to our e-mail list:</p>
+            <input type="text" name="email" />
+            <input type="submit" name="subscribe" value="Subscribe" />
+          </form>
+
+    Image Button
+      - You can use an image for a submit button. Use the type="image".
+
+      - This element will then need to follow good image use practice. This
+          means it should include the alt, width, and height attributes
+          following the src attribute.
+
+      - Example:
+          <form action="https://www.example.com/subscribe.php" method="post">
+            <p>Subscribe to our email list:</p>
+            <input type="text" name="email" />
+            <input type="image" src="http://bit.ly/img-subscribe-button"
+                alt="subscribe button image" width="100" height="20" />
+          </form>
+
+    The Button Element
+      - The button element (<button>...</button>) was introduced to
+          allow users more control over how their buttons appear.
+
+      - This element also allows other elements to appear inside the
+          button (between the tags). This means you can combine text
+          and images between the button tags.
+
+      - Example:
+          <form action="http://www.example.com/subscribe.php" method="post">
+            <button>
+              <img src="http://bit.ly/github-logo" alt="GitHub Logo" width="50" height="50" />
+              Push to GitHub
+            </button>
+          </form>
+
+  KEEPING TRACK
+    Forms can be lengthy, complex, and maddening. HTML gives us several
+      ways to manage how form data is both displayed and received.
+
+    Labeling and accessibility. Labels and ids expand the clickable area
+      to all inclusions of the selection (such as the text), rather than
+      just the button or checkbox
+
+    Visually collect related form elements into fieldsets with legends.
+      These create bounding boxes that signify when a new type of input
+      will be asked, or group similar question-sets.
+
+    Labels and ID's
+      - Each form control should have its own label element. This makes the
+          form accessible to vision impaired users.
+
+      - As a rule of thumb, labels should be placed ‘above or to the left’
+          of the input area for text, select boxes, and file uploads.
+
+      - Labels should be placed to the right of individual checkboxes and
+          radio buttons. Labels can be applied by wrapping them around both
+          the text description and the form input.
+
+      - Labels can also be included by using the for="" attribute. The
+          value for this attribute should be the id assigned to each
+          form element.
+
+    Fieldsets and Legends
+      - Use the fieldset element (<fieldset>...</fieldset>) to
+          group form data areas together!
+
+      - The legend element (<legend>...</legend>) comes directly
+          after the fieldset element tag. The caption should help identify
+          the purpose of this form group.
+
+      - Most browsers will display these groups with a line around the edge.
+          This presentation of this grouping can be altered with CSS and
+          also helps clarify data groups to users.
+
+  HTML5 INCLUSIONS
+    Validation
+      - It is possible to use HTML5 to inform users if they have entered
+          information correctly. This is known as “form validation”.
+
+      - Validation helps ensure the user enters information correctly and
+          with the correct “types” of data. Validation before submitting
+          a form to a server reduces server load and enables users to
+          more quickly see if there are errors in their form.
+
+      - Example:
+          <form action="https://www.example.com/login/" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required /><br />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required />
+            <input type="submit" value="Submit" />
+          </form>
+
+    Date
+      - type="date".
+
+      - In browsers that do not support this type, a simple text box will
+          be used. In those that do support it, the appearance will be
+          dictated by the browser.
+
+    E-Mail
+      - type="email"
+
+      - HTML5 also now includes an e-mail input type.
+
+      - Try the e-mail example in Firefox, Chrome, or Opera. It will not
+          accept your entry without it being a valid e-mail.
+
+    Search
+      - type="search"
+
+      - Another new element in HTML5 is the Search Box Element
+
+      - As with the other recent HTML5 elements we have just looked
+          at, some will work in some browsers, and others.
+
+    Figure and Figcaption
+      - With HTML5, a couple new elements were introduction to further
+          assist with images. These are "figure" <figure> and "figure
+          caption" <figcaption>. These can be used together to
+          easily group figures or images with associated captions.
+
+      - the figure element is used as a container to group together one or
+          more images with a caption. Within the figure element, you
+          would place your image and/or related elements, as well as your
+          caption elements.
+
+      - Example:
+          <figure>
+            <img src="http://bit.ly/github-logo" alt="GitHub Octocat
+              Logo" title="GitHub Logo" width="50" height="50">
+            <figcaption>
+              Black GitHub Logo
+            </figcaption>
+          </figure>
