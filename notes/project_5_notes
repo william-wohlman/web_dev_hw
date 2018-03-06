@@ -206,7 +206,7 @@ TABLES
         action="#"
           - is a link to a server-side script (a file on another
               computer not the users computer)
-          - Typically, this filr is a code file that will do 'something'
+          - Typically, this file is a code file that will do 'something'
               with the user's data before returning information back
               to the browser.
           - The value of this attribute will always be a URL
