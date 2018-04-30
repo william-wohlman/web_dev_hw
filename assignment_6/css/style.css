@@ -1,0 +1,143 @@
+*{
+  font-family: Arial;
+  background-color: #F7FBFC;
+  @basecolor01: #e8e8e8;
+  @color01: #5a86d1;
+  @color02: #c14949;
+  @color03: #e4d762;
+}
+
+/*----------------------------------------*/
+body
+{
+  height:815px;
+
+  /*border-style: solid;
+  border-width: 2px;
+  border-color: green;*/
+}
+
+/*----------------------------------------*/
+.main-container
+{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #424C4F;
+  padding: 10px;
+  padding-left:15px;
+
+  height:775px;
+  width: 775px;
+
+  background-color: #e8e8e8;
+}
+
+/*----------------------------------------*/
+.solid-div
+{
+  height:775px;
+  width: 775px;
+  /*background-color: green;*/
+  position: relative;
+}
+.solid1
+{
+  position: absolute;
+  background-color: #3fb58e;
+  width: 60%;
+  height:100%;
+  /*z-index: 1;*/
+}
+.solid2
+{
+  position: absolute;
+  background-color: #5a86d1;
+  left: 60%;
+  width: 40%;
+  height:100%;
+}
+
+/*----------------------------------------*/
+img
+{
+  width: inherit;
+  height: inherit;
+
+  border: none;
+  background: none;
+}
+/*----------------------------------------*/
+.graphics
+{
+  position: relative;
+  top: -790px;
+  background-color: transparent;
+}
+/*----------------------------------------*/
+.level1
+{
+  position: relative;
+  left: 50px;
+  top: 50px;
+
+  background-color: transparent;
+
+}
+.level1>img
+{
+  width: 475px;
+
+  border: none;
+  background: none;
+
+}
+/*----------------------------------------*/
+
+.level2
+{
+  position: relative;
+  left: 250px;
+  top: -250px;
+
+
+  background-color: transparent;
+  /*opacity: 1;*/
+  /*background-color: red;*/
+}
+.level2>img
+{
+  width: 200px;
+
+
+  border: none;
+  background: none;
+
+}
+/*----------------------------------------*/
+
+.level3
+{
+  position: relative;
+  left: 350px;
+  bottom: 260px;
+  width: 200px;
+  height:200px;
+
+  border: none;
+  background: none;
+}
+.level3>h1
+{
+  width: inherit;
+  height: inherit;
+
+  font-size: 200px;
+
+  text-shadow: 2px 2px 4px #3fb58e;
+  color: #5a86d1;
+
+  border: none;
+  background: none;
+
+  background-color: transparent;
+}
